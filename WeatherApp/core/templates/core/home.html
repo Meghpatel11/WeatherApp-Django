@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Weather App</title>
+</head>
+
+    <style>     
+        h1{
+            text-align: center;
+            padding-top: 100px;
+        }
+         input{
+            margin: 5px;
+        }
+        form{
+            text-align: center;
+        }
+        #results{
+            padding-top: 20px;
+            margin-left: -30px;
+            font-weight: 600;
+            text-align: center;
+        }
+    </style>
+
+<body>
+    <div class="container">
+        <h1>Wather App</h1>
+
+        <form action="" method="get">
+            <input type="text" name="city" id="city" placeholder="city..."><br>
+            <input type="submit" value="submit">
+        </form>
+
+        <div id="results">
+            {% if region %}
+
+                <ul>{{region}}</ul>
+                <ul>{{temp}}°C</ul>
+                <ul>{{time}}</ul>
+                <ul>{{stats}}</ul>
+
+            {% endif %}
+        </div>
+
+    </div>
+
+</body>
+</html>
